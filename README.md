@@ -8,6 +8,7 @@ Running the container in Docker requires:
    pseudo-filesystem;
 2. mounting a volume to `/mnt/data`, the directory that will be exported;
 3. exposing the port used for NFSv4 (2049).
+4. you should have nfs-utils installed for nfs and nfsd kernel modules
 
 For example:
 
