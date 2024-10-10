@@ -3,6 +3,12 @@
 set -eu
 set -o pipefail
 
+modprobe nfs
+modprobe nfsd
+
+chown -R nfsnobody:nfsnobody /mnt/data
+chmod -R 777 /mnt/data
+
 allowed_clients=$NFS_SERVER_ALLOWED_CLIENTS
 export_options="rw,sync,root_squash,no_subtree_check,fsid=0,insecure"
 
